@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:SS="clr-namespace:SS"
+             x:Class="SpreadsheetGUI.MainPage">
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="New" Clicked="NewClicked" />
+            <MenuFlyoutItem Text="Open" Clicked="OpenClicked" />
+            <MenuFlyoutItem Text="Save" Clicked="SaveClicked" />
+            <MenuFlyoutSubItem Text="Export">
+                <MenuFlyoutItem Text="Export via Email" Clicked="SendEmail"/>
+                <MenuFlyoutItem Text="Export via SMS" Clicked="SendSMS"/>
+            </MenuFlyoutSubItem>
+        </MenuBarItem>
+        <MenuBarItem Text="Help">
+            <MenuFlyoutSubItem Text="Info">
+                <MenuFlyoutItem Text="Selecting Cells" Clicked="HelpSelecting"/>
+                <MenuFlyoutItem Text="Editing Cell Contents" Clicked="HelpChanging"/>
+                <MenuFlyoutSubItem Text="AdditionalFeatures">
+                    <MenuFlyoutItem Text="Exporting via Email" Clicked="AboutEmail"/>
+                    <MenuFlyoutItem Text="Exporting via SMS" Clicked="AboutSMS"/>
+
+                </MenuFlyoutSubItem>
+            </MenuFlyoutSubItem>
+
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+    <Grid>
+        <SS:SpreadsheetGrid x:Name="spreadsheetGrid" />
+    </Grid>
+</ContentPage>
+
