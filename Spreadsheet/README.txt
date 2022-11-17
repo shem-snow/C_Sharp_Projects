@@ -1,6 +1,8 @@
 Written by Shem Snow for CS 3500 during Fall 2022
 Last Edited on Oct 21 2022
 
+Set "SpreadsheetGUI" as the startup project.
+
 
 Organization
 ------------
